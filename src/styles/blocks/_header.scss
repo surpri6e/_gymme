@@ -1,0 +1,59 @@
+.header {
+    position: fixed;
+    left: 0;
+    top: 0;
+
+    width: 100%;
+    z-index: 100;
+
+    background-color: $primaryColor;
+
+    &__container {
+        display: flex;
+        align-items: center;
+        min-height: 8.4rem;
+        padding: 2rem 1.5rem;
+        justify-content: space-between;
+    }
+
+    &__logo {
+        display: block;
+        color: $white;
+        font-size: 2.8rem;
+        font-weight: 600;
+        font-family: Inter;
+        position: relative;
+
+        span {
+            color: $mainGreen;
+            font-size: 1.8rem;
+        }
+
+        img {
+            margin-top: 0.3rem;
+            margin-right: -0.3rem;
+        }
+    }
+}
+
+.buttons-header {
+    display: flex;
+    flex-wrap: wrap;
+
+    &__button {
+        min-height: 4.2rem;
+        &:not(:last-child) {
+            margin-right: 1.6rem;
+        }
+
+        &:hover {
+            background-color: $mainGreen;
+        }
+    }
+}
+
+@media (max-width: $bp-1) {
+    .buttons-header__button {
+        padding: 0.2rem 1rem;
+    }
+}

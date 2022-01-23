@@ -22,6 +22,7 @@ body {
   display: flex;
   flex-direction: column;
 
+  color: $primaryColor;
   font-weight: 400;
   font-size: 1.6rem;
   font-family: "Open Sans" sans-serif;
@@ -52,8 +53,11 @@ body {
 }
 
 //? Blocks site
+@import "../blocks/_btn.scss";
+@import "../blocks/_burger.scss";
 @import "../blocks/_header.scss";
 @import "../blocks/_footer.scss";
+@import "../blocks/_menu.scss";
 
 //? Libs site
 @import "../libs/_libs.scss";

@@ -122,6 +122,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  color: #131316;
   font-weight: 400;
   font-size: 1.6rem;
   font-family: "Open Sans" sans-serif;
@@ -152,4 +153,144 @@ body {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
+}
+
+.btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 0.1rem;
+  padding: 0.2rem 3rem;
+  font-family: Inter;
+  font-weight: 700;
+  font-size: 1.2rem;
+  line-height: 150%;
+  text-transform: uppercase;
+  color: #fff;
+  letter-spacing: 0.05rem;
+  text-align: center;
+  -webkit-transition: all 150ms linear;
+  transition: all 150ms linear;
+}
+
+.header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  background-color: #131316;
+}
+
+.header__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 8.4rem;
+  padding: 2rem 1.5rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.header__logo {
+  display: block;
+  color: #fff;
+  font-size: 2.8rem;
+  font-weight: 600;
+  font-family: Inter;
+  position: relative;
+}
+
+.header__logo span {
+  color: #4AE290;
+  font-size: 1.8rem;
+}
+
+.header__logo img {
+  margin-top: 0.3rem;
+  margin-right: -0.3rem;
+}
+
+.buttons-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.buttons-header__button {
+  min-height: 4.2rem;
+}
+
+.buttons-header__button:not(:last-child) {
+  margin-right: 1.6rem;
+}
+
+.buttons-header__button:hover {
+  background-color: #4AE290;
+}
+
+@media (max-width: 1280px) {
+  .buttons-header__button {
+    padding: 0.2rem 1rem;
+  }
+}
+
+.menu__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.menu__elem {
+  line-height: calc(18 / 16 * 100%);
+  padding: 1rem;
+}
+
+.menu__elem:not(:last-child) {
+  margin-right: 1.2rem;
+}
+
+.menu__link {
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+  font-family: Inter;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.9);
+  padding: 0.1rem 1rem;
+}
+
+.menu__link:hover {
+  color: #131316;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.menu__link--active {
+  color: #131316;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+@media (max-width: 1280px) {
+  .menu__elem {
+    padding: 0.5rem;
+  }
+  .menu__elem:not(:last-child) {
+    margin-right: 0.6rem;
+  }
+  .menu__link {
+    padding: 0.1rem 0.3rem;
+  }
 }
