@@ -125,7 +125,7 @@ body {
   color: #131316;
   font-weight: 400;
   font-size: 1.6rem;
-  font-family: "Open Sans" sans-serif;
+  font-family: "Open Sans";
   line-height: 1;
 }
 
@@ -185,7 +185,7 @@ body {
   top: 0;
   width: 100%;
   z-index: 100;
-  background-color: #131316;
+  background-color: rgba(0, 0, 0, 0.75);
 }
 
 .header__container {
@@ -293,4 +293,166 @@ body {
   .menu__link {
     padding: 0.1rem 0.3rem;
   }
+}
+
+.fitness {
+  background-color: #131316;
+}
+
+.fitness__container {
+  max-width: 103.8rem;
+  background: url(/src/assets/images/header-image.jpg) right top no-repeat;
+}
+
+.fitness__content {
+  padding: 17rem 0;
+  max-width: 52rem;
+}
+
+.fitness__content > *:not(:last-child) {
+  margin-bottom: 3.2rem;
+}
+
+.fitness__title {
+  font-family: Inter;
+  font-weight: 800;
+  font-size: 6rem;
+  line-height: calc(65 / 60 * 100%);
+  color: #fff;
+}
+
+.fitness__title span {
+  color: #4AE290;
+}
+
+.fitness__text {
+  font-weight: 500;
+  font-size: 2.4rem;
+  line-height: calc(34 / 24 * 100%);
+  color: #DEDEE3;
+}
+
+.buttons-fitness {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.buttons-fitness__button {
+  min-height: 4.6rem;
+  font-size: 1.4rem;
+  color: #131316;
+  background-color: #fff;
+}
+
+.buttons-fitness__button:not(:last-child) {
+  margin-right: 1.6rem;
+}
+
+.buttons-fitness__button:hover {
+  background-color: #4AE290;
+  color: #fff;
+}
+
+.title-block {
+  font-family: Inter;
+  font-weight: 800;
+  font-size: 5rem;
+  text-align: center;
+  color: #131316;
+  padding: 3rem 0;
+}
+
+.title-block span {
+  color: #4AE290;
+}
+
+.mission__container {
+  max-width: 103.8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.mission__content {
+  max-width: 76.8rem;
+  padding: 14rem 0;
+}
+
+.mission__content > *:not(:last-child) {
+  margin-bottom: 3.2rem;
+}
+
+.mission__title {
+  text-align: start;
+  padding-left: 5rem;
+  background: url(/src/assets/icons/mission.svg) left top no-repeat;
+}
+
+.mission__text {
+  font-weight: 500;
+  font-size: 2rem;
+  line-height: calc(32 / 20 * 100%);
+  color: #595962;
+}
+
+.mission__text p {
+  margin-bottom: 2.1rem;
+}
+
+.buttons-mission {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.buttons-mission__button {
+  font-size: 1.4rem;
+  padding: 0rem;
+  color: #131316;
+  margin-right: 1rem;
+}
+
+.buttons-mission__button:hover {
+  text-decoration: underline;
+}
+
+.arrow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 1.95rem;
+  height: 2rem;
+  background-color: #131316;
+  color: #fff;
+  border-radius: 50%;
+  font-size: 1.6rem;
+  cursor: pointer;
+  -webkit-transition: all 150ms ease-in;
+  transition: all 150ms ease-in;
+}
+
+.arrow:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.training__title {
+  background: url(/src/assets/icons/calendar.svg) 30% top no-repeat;
 }

@@ -6,7 +6,7 @@
     width: 100%;
     z-index: 100;
 
-    background-color: $primaryColor;
+    background-color: rgba($black, 0.75);
 
     &__container {
         display: flex;

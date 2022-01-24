@@ -1,0 +1,72 @@
+.mission {
+
+    &__container {
+        max-width: 103.8rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__content {
+        max-width: 76.8rem;
+        padding: 14rem 0;
+
+        & > *:not(:last-child) {
+            margin-bottom: 3.2rem;
+        }
+    }
+
+    &__title {
+        text-align: start;
+        padding-left: 5rem;
+        
+        background: url(/src/assets/icons/mission.svg) left top no-repeat;
+    }
+
+    &__text {
+        font-weight: 500;
+        font-size: 2rem;
+        line-height: calc(32 / 20 * 100%);
+        color: $secondaryColor;
+
+        p {
+            margin-bottom: 2.1rem;
+        }
+    }
+}
+
+.buttons-mission {
+    display: flex;
+    flex-wrap: wrap;
+
+    &__button {
+        font-size: 1.4rem;
+        padding: 0rem;
+        color: $primaryColor;
+        margin-right: 1rem;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+.arrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 1.95rem;
+    height: 2rem;
+
+    background-color: $primaryColor;
+    color: $white;
+    border-radius: 50%;
+    font-size: 1.6rem;
+
+    cursor: pointer;
+    transition: all 150ms ease-in;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+}
