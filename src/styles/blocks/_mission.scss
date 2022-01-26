@@ -11,6 +11,8 @@
         max-width: 76.8rem;
         padding: 14rem 0;
 
+        position: relative;
+
         & > *:not(:last-child) {
             margin-bottom: 3.2rem;
         }
@@ -19,8 +21,14 @@
     &__title {
         text-align: start;
         padding-left: 5rem;
-        
-        background: url(/src/assets/icons/mission.svg) left top no-repeat;
+    }
+
+    &__image {
+        position: absolute;
+        width: 15rem;
+        height: 10.5rem;
+        left: 0;
+        top: 13.5rem;
     }
 
     &__text {

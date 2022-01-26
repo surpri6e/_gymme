@@ -1,6 +1,44 @@
 .training {
+    
+    margin-bottom: 10rem;
+
+    & > *:not(:last-child) {
+        margin-bottom: 9rem;
+    }
+
+    &__container {
+        max-width: 103.8rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__image {
+        position: absolute;
+        width: 10.6rem;
+        height: 10rem;
+        top : 0;
+        left: -4rem;
+    }
 
     &__title {
-        background: url(/src/assets/icons/calendar.svg) 30% top no-repeat;
+        margin-left: 4rem;
+    }
+}
+
+.buttons-training {
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: flex-end;
+    margin-right: 7.5rem;
+
+    & > *:not(:last-child) {
+        margin-right: 3.2rem;
+    }
+
+    span {
+        width: 2.95rem;
+        height: 3rem;
     }
 }

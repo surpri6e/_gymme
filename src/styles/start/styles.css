@@ -301,12 +301,33 @@ body {
 
 .fitness__container {
   max-width: 103.8rem;
-  background: url(/src/assets/images/header-image.jpg) right top no-repeat;
+  position: relative;
+}
+
+.fitness__image {
+  position: absolute;
+  width: 55%;
+  height: 100%;
+  right: 0;
+  top: 0;
+}
+
+.fitness__gradient {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: transparent;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(19, 19, 22, 0.2)), to(rgba(19, 19, 22, 0.2)));
+  background-image: linear-gradient(0deg, rgba(19, 19, 22, 0.2), rgba(19, 19, 22, 0.2));
 }
 
 .fitness__content {
-  padding: 17rem 0;
+  padding: 25.2rem 0 17rem 0;
   max-width: 52rem;
+  position: relative;
+  z-index: 2;
 }
 
 .fitness__content > *:not(:last-child) {
@@ -363,6 +384,8 @@ body {
   text-align: center;
   color: #131316;
   padding: 3rem 0;
+  position: relative;
+  z-index: 2;
 }
 
 .title-block span {
@@ -385,6 +408,7 @@ body {
 .mission__content {
   max-width: 76.8rem;
   padding: 14rem 0;
+  position: relative;
 }
 
 .mission__content > *:not(:last-child) {
@@ -394,7 +418,14 @@ body {
 .mission__title {
   text-align: start;
   padding-left: 5rem;
-  background: url(/src/assets/icons/mission.svg) left top no-repeat;
+}
+
+.mission__image {
+  position: absolute;
+  width: 15rem;
+  height: 10.5rem;
+  left: 0;
+  top: 13.5rem;
 }
 
 .mission__text {
@@ -453,6 +484,56 @@ body {
           transform: scale(1.1);
 }
 
+.training {
+  margin-bottom: 10rem;
+}
+
+.training > *:not(:last-child) {
+  margin-bottom: 9rem;
+}
+
+.training__container {
+  max-width: 103.8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.training__image {
+  position: absolute;
+  width: 10.6rem;
+  height: 10rem;
+  top: 0;
+  left: -4rem;
+}
+
 .training__title {
-  background: url(/src/assets/icons/calendar.svg) 30% top no-repeat;
+  margin-left: 4rem;
+}
+
+.buttons-training {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-right: 7.5rem;
+}
+
+.buttons-training > *:not(:last-child) {
+  margin-right: 3.2rem;
+}
+
+.buttons-training span {
+  width: 2.95rem;
+  height: 3rem;
 }
