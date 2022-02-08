@@ -1,1 +1,7 @@
-# Ignoring files.
+node_modules
+dist
+gulp
+
+gulpfile.js
+package.json
+package-lock.json
