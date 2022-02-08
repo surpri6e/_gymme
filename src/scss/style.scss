@@ -3,6 +3,7 @@
 @import 'vars';
 @import 'mixins';
 @import 'iconfonts';
+@import 'fonts';
 
 //! Base styles for site
 html {
@@ -10,7 +11,7 @@ html {
 }
 
 body {
-  background-color: $primaryColor;
+  background-color: $white;
   height: 100%;
 }
 
@@ -21,8 +22,8 @@ body {
   flex-direction: column;
 
   font-weight: 500;
-  @include adapFont(100, 24);
-  font-family: "Times New Romans" sans-serif;
+  font-size: 1.6rem;
+  font-family: 'Open Sans';
   line-height: 1;
 }
 
@@ -50,5 +51,14 @@ body {
 }
 
 //? Blocks site
+@import './libs/btn';
 @import './libs/header';
+@import './libs/menu';
+@import './libs/burger';
+@import './libs/title-block';
+@import './libs/fitness';
+@import './libs/main';
+@import './libs/mission';
+@import './libs/training';
+@import './libs/swiper';
 @import './libs/footer';

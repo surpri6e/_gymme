@@ -1,6 +1,4 @@
-const elementsDOM = {
+export const elements = {
     body: document.querySelector('body'),
     header: document.querySelector('.header'),
 }
-
-export { elementsDOM }

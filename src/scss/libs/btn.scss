@@ -9,7 +9,7 @@
     font-family: Inter;
     font-weight: 700;
     font-size: 1.2rem;
-    line-height: (18 / 12 * 100%);
+    line-height: calc(18 / 12 * 100%);
     text-transform: uppercase;
     color: $white;
     letter-spacing: 0.05rem;
