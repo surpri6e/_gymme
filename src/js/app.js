@@ -1,9 +1,106 @@
 "use strict"
 
-import { elements } from './modules/elementsDOM.js';
+import * as ts from './modules/ts.js';
 import { isTouch } from './modules/isTouch.js';
 
 import Swiper, { Navigation, Pagination, Keyboard, Autoplay} from 'swiper';
+
+
+// import { event } from './test.js';
+// event();
+
+// import * as Type from './test.js';
+
+// console.log(Type.contact3);
+
+// Object.prototype.fine = () => console.log('I\'m fine');
+// import { obj } from './object.js';
+
+
+// console.log(obj.isValid());
+// // obj.files = './src';
+// // console.log(obj.isValid());
+// // obj.name = '';
+// // console.log(obj.isValid());
+
+// const json = {
+//     name: 'daniel',
+//     age: 15,
+// }
+
+// const str = JSON.stringify(json, null, '  ');
+
+// console.log(~str);
+
+// const jsonClone = JSON.parse(JSON.stringify(json));
+
+// console.log(jsonClone);
+// console.log(jsonClone === json);
+
+// const str = JSON.stringify(json)
+// const parjson = JSON.stringify(pjson)
+
+// console.log(str);
+// console.log(typeof str);
+
+
+// const clone = JSON.parse(str)
+
+// console.log(clone);
+// console.log(clone.name);
+// console.log(clone === json);
+// console.log(typeof clone);
+// // parjson.
+
+// import { User } from './cb.js';
+
+
+// console.log(User);
+
+// import { fetchTodos } from './cb.js';
+
+const sleep = ms => {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve(ms);
+        }, ms)
+    })
+}
+
+
+const urlAPI = `https://jsonplaceholder.typicode.com/todos` 
+
+// async function fetchTodos() {
+//     console.log('Fetching is started');
+//     return sleep(2000)
+//         .then(() => fetch(urlAPI).then(res => res.json()))
+// }
+
+// fetchTodos()
+//     .then(data => {
+//         console.log("Data: ", data);
+//     })
+//     .catch(function (err) {
+//         console.error(err);
+//     });
+
+async function fetchAsyncTodos() {
+    try {
+        console.log('Fetching is started');
+        await sleep(1000);
+        const res = await fetch(urlAPI);
+        const data = await res.json();
+        console.log(data);
+    } catch (err) {
+        console.error(err);
+    } finally {
+        console.log('Finally');
+    }
+}
+
+fetchAsyncTodos();
+
+
 
 const swiperTraining = new Swiper('.swiper', {
 
@@ -182,9 +279,9 @@ if(document.body.classList.contains('_Pc')) {
 
 console.log(headerNavigation);
 
-if (location.href === hrefSite + '#' + headerNavigation.workouts.id) {
-    console.log('true');
-} 
+// if (location.href === hrefSite + '#' + headerNavigation.workouts.id) {
+//     console.log('true');
+// } 
 
 // ====================
 
@@ -250,4 +347,90 @@ console.log(textFitnessOffsetWidth);
 console.log(textFitnessOffsetHeight);
 
 const xy = titleFitness.ariaColIndex;
+
+// if(document.body.classList.contains('_Touch')) {
+//     throw new Error(`Error has been found
+//         at TypeScriptInt(['native code']): string; This is function doesn't return number types
+//         at GenericFloamous<IFred>['class name'].age; Invalid record 
+
+//         ==========
+//     `)
+// }
+
+// const ob = Object.create(Object);
+
+// console.log(ob);
+// console.log(Object.prototype);
+
+// ====================
+
+
+// Object.prototype.name = 5656;
+
+// let array = [1, 2, 3, 4, 5];
+
+// Array.prototype.newM = function(N) {
+//     return this.map((el) => {
+//         return el * N; 
+//     });
+// }
+
+// console.log(array.newM(4));
+// console.log(array.name);
+
+// array.__proto__.clear = function() {
+//     array = [];
+// }
+
+// console.log(array);
+// console.log(array.clear());
+// console.log(array);
+
+// let arr1 = [4, 5, 6, 7,]
+
+// console.log(arr1);
+// arr1.clear();
+// console.log(arr1);
+
+
+// function increm(n1) {
+//     return function(n2) {
+//         return function(n3) {
+//             return function(n4) {
+//                 console.log(n1 + n2 + n3 + n4)
+//             }
+//         }
+//     }
+// }
+
+// const p1 = increm(1)(2)(3)
+
+// p1(5)
+
+function logPerson() {
+    console.log(`Person:  ${this.name}, ${this.age}, ${this.job}`);
+}
+
+function bind(person, logger) {
+    return logger.call(person)
+}
+
+
+const person1 = {
+    name: 'Daniel',
+    age: 54, 
+    job: 'JavaScript',
+}
+
+const person2 = {
+    name: 'Dima',
+    age: 12, 
+    job: 'HTML',
+}
+
+// bind(person1, logPerson);
+// bind(person2, logPerson);
+
+
+// const persons = Object.create(person1);
 
