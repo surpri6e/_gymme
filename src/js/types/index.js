@@ -1,12 +1,7 @@
-//! tsc -w Позволяет редактировать и компилировать файлы в прямом эфире.
-//! tsc -t Позволяет по какому формату будет компилироваться ts файл.
-//! tsc --outDir Позволяет задать папку для хранения, скомпилированных js файлов.
-//? Комманда правильной компиляции => tsc -t ES6 --outDir ./src/js/modules -w ./src/js/ts/ts.ts
-// import * as types from "./types.js";
-import { fetchAsyncTodos, fetchAsyncPhotos } from './server.js';
-import { getTitlesFromServerTodos, getDataFromServerTodos, reloadImageOnPage, getFullUrlPhotos } from './server.js';
+import { reloadImageOnPage, urlAPI } from './server.js';
 import { isTouch } from './isTouch.js';
-export const __URL__ = 'https://surpri6e.000webhostapp.com/';
+import { XHRServerRequest } from 'server-requests/lib/index.js';
+let __photos__;
 /**
     Базовая функция, которую необходимо вызвать один раз в исходном коде главного JS файла.
     В данной функции вызваны, как и другие необходимые для корректной работы функции, так и прописан
@@ -17,21 +12,16 @@ export const __URL__ = 'https://surpri6e.000webhostapp.com/';
     @license MIT
  */
 export function mainDocumentSettings() {
-    // console.error('mainDocumentSetting() is activated.');
-    // window.open('https://sursy.000webhostapp.com', '.blank');
     eventsDocument();
-    Promise.all([fetchAsyncTodos(), fetchAsyncPhotos()])
-        .then(() => {
-        console.log(getTitlesFromServerTodos());
+    XHRServerRequest({
+        _urlServer: urlAPI,
+        _method: 'GET',
+        _responseType: 'json',
     })
-        .then(() => {
-        console.log(getDataFromServerTodos());
-    })
-        .then(() => {
-        reloadImageOnPage(177);
-    })
-        .then(() => {
-        console.log(getFullUrlPhotos());
+        .then((data) => {
+        __photos__ = data;
+        console.log(__photos__);
+        reloadImageOnPage(4555, data);
     });
     if (isTouch.any()) {
         document.body.classList.add('_Touch');
@@ -57,7 +47,7 @@ function activeHeaderMenuLink() {
         el.id = textInLink;
         el.href = `#${el.id}`;
     });
-    if (location.href === __URL__ || location.href === __URL__ + '#') {
+    if (location.href === 'work' || location.href === 'work' + '#') {
         mainHeaderMenuLink.classList.add(activeHeaderMenuLink);
         return;
     }

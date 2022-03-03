@@ -1,4 +1,4 @@
-export let isTouch= {
+export let isTouch = {
     Android: function() {
         return navigator.userAgent.match(/Android/i);
     },
